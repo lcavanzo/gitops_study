@@ -16,4 +16,4 @@ jobs:
 
       - name: Build the Docker image
 
-        run: ls; docker build ./implementing_gitops_book/ch03 --file dockerfile --tag my-image-name:$(date +%s)
+        run: ls; docker build ./implementing_gitops_book/ch03/Dockerfile --file dockerfile --tag my-image-name:$(date +%s)
