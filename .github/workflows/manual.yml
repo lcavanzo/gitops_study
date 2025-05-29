@@ -1,25 +1,19 @@
 name: Create Docker Image CI
 
 on:
-
   push:
-
-    branches: [ main ]
+    branches: [main]
 
   pull_request:
-
-    branches: [ main ]
+    branches: [main]
 
 jobs:
-
   build:
-
     runs-on: ubuntu-latest
 
     steps:
+      - uses: actions/checkout@v4.1.1
 
-    - uses: actions/checkout@v4.1.1
+      - name: Build the Docker image
 
-    - name: Build the Docker image
-
-      run: docker build . --file dockerfile --tag my-image-name:$(date +%s)
+        run: docker build ./implementing_gitops_book/ch03 --file dockerfile --tag my-image-name:$(date +%s)
