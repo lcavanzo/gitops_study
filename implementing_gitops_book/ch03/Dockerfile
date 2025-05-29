@@ -2,7 +2,7 @@
 FROM python:3.8-slim
 
 # Set the working directory contents into the container at /usr/src/app
-COPY . .
+COPY ./implementing_gitops_book/ch03/ .
 
 # Install any needed packages specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
@@ -11,7 +11,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 80
 
 # Define environment variable
-ENV NAME World
+ENV NAME=World
 
 # Run app.py when the container launches
 CMD ["python", "app.py"]
