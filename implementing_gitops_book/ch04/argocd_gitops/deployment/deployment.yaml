@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-city-weahter-app
+  name: my-city-weather-app
   labels:
-    app: my-city-weahter-app
+    app: my-city-weather-app
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: my-city-weahter-app
+      app: my-city-weather-app
   template:
     metadata:
       labels:
-        app: my-city-weahter-app
+        app: my-city-weather-app
     spec:
       containers:
-        - name: my-city-weahter-app
+        - name: my-city-weather-app
           image: lcavanzo/gitops-k8s-deployments:main
           ports:
             - containerPort: 8080
