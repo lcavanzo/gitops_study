@@ -3,11 +3,10 @@ kind: Service
 metadata:
   name: my-city-weather-app-service
 spec:
-  type: LoadBalancer
-  ports:
-    - port: 80
-      targetPort: 8080
-      protocol: TCP
   selector:
     app: my-city-weather-app
-
+  type: NodePort
+  ports:
+    - protocol: TCP
+      port: 80
+      nodePort: 8080
