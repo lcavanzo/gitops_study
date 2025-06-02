@@ -9,7 +9,7 @@ COPY ./implementing_gitops_book/ch04/argocd_gitops/src/package*.json ./
 RUN npm install
 
 # Bundle app source
-COPY ./implementing_gitospl_book/ch04/argocd_gitops/src/ .
+COPY ./implementing_gitops_book/ch04/argocd_gitops/src/ .
 
 # Expose the port the app runs on
 EXPOSE 3000
